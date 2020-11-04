@@ -1,0 +1,313 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Londrina+Shadow&family=Montserrat&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+html{
+	background: rgb(29,26,26);
+background: linear-gradient(45deg, rgba(29,26,26,1) 35%, rgba(51,46,46,1) 70%, rgba(74,65,65,0.8) 100%);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.header{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    
+}
+.container{
+    width: 100vw;
+    height: 100hv;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 80rem;
+    padding: 2rem;
+}
+h1{
+    font-family: 'Architects Daughter', cursive;
+    font-size: 5.5rem;
+    color:white;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5rem;
+    text-align: center;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem ;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.flex-column{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; 
+}
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+.justify-center{
+    justify-content:center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.hidden{
+    display: none;
+}
+.container-btn{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    font-size: 4rem;
+    padding: 2rem 2rem;
+    width: 32rem;
+    text-align: center;
+    margin: 1rem 2rem;
+    text-decoration: none;
+    color:#fff;
+    background-image: linear-gradient(to right, #0575E6 0%, #021B79  51%, #0575E6  100%);
+    border-radius: 10px;
+    font-family: 'Architects Daughter', cursive;
+    transition: 0.5s;
+    background-size: 200% auto;          
+    font-weight: bold;
+   
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-position: right center; 
+   transition: transform 150ms;
+   transform: scale(1.03);
+   box-shadow: 0 0 10px #eee;
+}
+.btn[disabled]:hover{
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.highscore-btn{
+   
+   background-image: linear-gradient(to right, #F7971E 0%, #FFD200  51%, #F7971E  100%);
+
+}
+.play-btn{
+    
+    background-image: linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%);
+    
+}
+.container .container-btn .fa-crown{
+    margin-right: 1rem;
+    font-size: 3rem;
+}
+
+
+
+.end-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+   
+}
+#finalScore{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 7rem;
+}
+input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(238, 238, 238, 0.5);
+    border-radius: 10px;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+#username {
+    margin-bottom: 1rem;
+    width: 100%;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#end-text {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+#saveScoreBtn {
+    border: none;
+}
+
+/*Quiz style*/
+.choice-wrapper{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    min-width: 90rem;
+    margin-top: 4rem;
+   
+}
+
+#question{
+    font-size: 4rem;
+    letter-spacing: 1px;
+}
+
+
+.choice-container{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    margin-bottom:1.5rem;
+    width: 40%;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #f857a6 0%,  #f857a6  51%,  #ff5858 100%);
+    min-width: 40rem;
+    transition: 0.5s;
+    margin: 2rem 2rem;
+
+}
+.choice-container:hover{
+    cursor: pointer;
+    background-position: right center; 
+    box-shadow: 0 0.4rem 1.4rem 0 #f9dfe8;
+    transform: scale(1.02);
+    transform: transform 100ms;
+  
+}
+
+
+.choice-container .choice-text{
+    padding:2rem;
+    width:100%;
+    font-size: 3rem;
+    font-weight: 500;
+ 
+}
+
+.correct{
+    background: #56ab2f;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+
+}
+.incorrect{
+ background: #D31027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EA384D, #D31027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EA384D, #D31027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+}
+/*display*/
+
+#hud{
+    display: flex;
+    justify-content: space-between;
+
+}
+.hud-item  .hud-prefix, .hud-main-text{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+  
+}
+.hud-prefix{
+    text-align: center;
+    font-size: 2.5rem;
+}
+.hud-main-text{
+   
+    text-align: center; 
+    color:#ffd31d;
+    
+}
+.hud-main-text i{
+    align-self: center;
+}
+#progressBar{
+    width: 25rem;
+    height: 2.5rem;
+    border: 0.2rem solid #da2a66;
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+
+#progressBarFull{
+    height: 100%;
+    background: #da2a66;
+    width: 0%;
+}
+
+@media screen and (max-width: 768px){
+    
+    .choice-container{
+        min-width: 40rem;
+    }
+}
+
+
+/*scores styling*/
+#highScoresList{
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+   font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+
+.high-score {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.feedback{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
